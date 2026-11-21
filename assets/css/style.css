@@ -6,6 +6,7 @@
     --texto: #FFE6F0;
     --hover: #FC6BA7;
     --roxo: #B99AEF;
+    --roxo-hover: #D5C1FF;
 }
 
 * {
@@ -19,10 +20,25 @@ html {
     scroll-padding-top: 120px;
 }
 
+html, body, a, button, .btn {
+    cursor: none;
+}
+
 body {
     background: var(--background);
     color: var(--texto);
     font-family: 'Poppins', sans-serif;
+}
+
+.cursor-personalizado {
+    position: fixed;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
 }
 
 .navbar {
@@ -246,6 +262,11 @@ body {
     font-size: .75rem;
     font-weight: 600;
     letter-spacing: 3px;
+}
+
+.linha:hover {
+    color: var(--roxo-hover);
+    text-shadow: 0 0 10px rgba(185, 154, 239, .3);
 }
 
 section {
